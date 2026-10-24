@@ -45,6 +45,17 @@ Total booking objects: undefined
 
 That output is consistent with the same mismatch: the script attempted to count an object as if it were an array.
 
+## Corrected Postman assertions
+
+After replacing the collection-count assertion with checks for a single booking object, all four assertions passed:
+
+- `Status is 200`
+- `Response is a single booking object`
+- `Booking has required fields`
+- `Booking dates have check-in and check-out`
+
+These assertions match the response shape returned by `GET /booking/1`.
+
 ## Reproduction
 
 1. Open Postman.
